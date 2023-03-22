@@ -21,3 +21,13 @@ $(function () {
   //
   // TODO: Add code to display the current date in the header of the page.
 });
+
+var savebutton = document.getElementsByClassName("saveBtn");
+
+/* function assign class to past(grey) present(orange) future(green) using if else */
+
+
+
+function saveChanges(){};
+
+savebutton.addEventListner("click", saveChanges);

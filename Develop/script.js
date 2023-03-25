@@ -18,7 +18,7 @@ $(function() {
   
   saveButton.on('click', function(){
     var agenda = $(this).siblings('textarea').val();
-    var hourBlock = $(this).parent().attr('id');
+    var hourBlock = $(this).find(".hour").text();//$(this).parent().attr('id')
   
     localStorage.setItem(agenda, hourBlock);
   });
@@ -26,6 +26,7 @@ $(function() {
 
 /* function assign class to past(grey) present(orange) future(green) using if else */
 function timeChanges () {
+
   for(i = 0; i < timeBlock.length; i++){
     if(hourBlock < currentHour) {
       //past(grey)

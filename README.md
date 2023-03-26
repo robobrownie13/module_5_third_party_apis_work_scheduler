@@ -18,4 +18,4 @@ SO THAT I can manage my time effectively
 
 <br>
 
-Deployed Project: 
+Deployed Project: https://robobrownie13.github.io/robo_3rd_party_apis_work_scheduler/

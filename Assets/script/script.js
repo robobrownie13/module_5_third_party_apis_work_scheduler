@@ -5,11 +5,11 @@ var saveButton = $(".saveBtn");
 var dayFormat = dayjs().format('dddd, MMM DD, YYYY');
 var current24Hour = dayjs().format('H');
 
-  saveButton.on('click', function(){
-    var agenda = $(this).siblings('.description').val();
-    var hourId = $(this).parent().attr('id');
-    localStorage.setItem(hourId, agenda);
-  });
+saveButton.on('click', function(){
+  var agenda = $(this).siblings('.description').val();
+  var hourId = $(this).parent().attr('id');
+  localStorage.setItem(hourId, agenda);
+});
 
 function timeChanges () {
   for(i = 0; i < timeBlock.length; i++){
@@ -17,9 +17,8 @@ function timeChanges () {
     $(timeBlock[i]).toggleClass("past", hourBlock < current24Hour)
     $(timeBlock[i]).toggleClass("present",hourBlock === current24Hour)
     $(timeBlock[i]).toggleClass("future",hourBlock > current24Hour);
-
-  };
-}
+  }
+};
 timeChanges();
 
 function displayTime() {

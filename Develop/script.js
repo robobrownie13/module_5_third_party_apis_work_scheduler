@@ -7,9 +7,8 @@ var current24Hour = dayjs().format('H');
 
   saveButton.on('click', function(){
     var agenda = $(this).siblings('.description').val();
-    var hourBlockText = $(this).parent().attr('id');
-    console.log(hourBlockText, agenda);
-    localStorage.setItem(hourBlockText, agenda);
+    var hourId = $(this).parent().attr('id');
+    localStorage.setItem(hourId, agenda);
   });
 
 function timeChanges () {
